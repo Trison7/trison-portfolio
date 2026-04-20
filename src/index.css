@@ -1,73 +1,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background: #050b18;
-  color: #b8d4f0;
-  font-family: 'Rajdhani', sans-serif;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { background: #050b18; color: #b8d4f0; font-family: 'Rajdhani', sans-serif; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #050b18; }
 ::-webkit-scrollbar-thumb { background: #1a2f50; border-radius: 2px; }
-
 ::selection { background: rgba(0,212,255,0.25); color: #fff; }
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; } to { opacity: 1; }
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; } 50% { opacity: 0; }
-}
-@keyframes pulse {
-  0%, 100% { opacity: 0.3; transform: scale(0.8); }
-  50%       { opacity: 1;   transform: scale(1);   }
-}
-@keyframes glow {
-  0%, 100% { box-shadow: 0 0 8px rgba(0,212,255,0.4); }
-  50%       { box-shadow: 0 0 24px rgba(0,212,255,0.8); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50%       { transform: translateY(-12px) rotate(180deg); }
-}
-@keyframes spin3d {
-  from { transform: perspective(400px) rotateY(0deg) rotateX(10deg); }
-  to   { transform: perspective(400px) rotateY(360deg) rotateX(10deg); }
-}
-@keyframes scanline {
-  0%   { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
-}
-
-/* Mobile-first responsive grid helpers */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-@media (max-width: 768px) {
-  .grid-2 { grid-template-columns: 1fr; }
-  .grid-3 { grid-template-columns: 1fr; }
-  .hide-mobile { display: none !important; }
-  .full-mobile { width: 100% !important; }
-}
-@media (max-width: 480px) {
-  .grid-2, .grid-3 { grid-template-columns: 1fr; }
-}
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@media (max-width: 768px) { .hide-mobile { display: none !important; } }
